@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Heebo;
+  font-size: 1em;
+  color: #111;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+.form-group__header {
+  font-weight: 700;
+  font-size: 1.7em;
+  color: #16f069;
+}
+
+.form-group__select, .form-group__input, .form__bio-field {
+  border-radius: 5px;
+  border: 1px solid #8f939c;
+  padding: 0.3em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background: #85e6d7;
+  min-height: 100vh;
+}
+
+.container {
+  width: 60%;
+  background: #fafafa;
+  margin: 3em 0;
+  border-radius: 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  font-weight: 600;
+  font-size: 3em;
+  color: #8f939c;
+  width: 100%;
+  background: #e1e5ed;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 2px solid #616266;
+}
+
+.radio__custom {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radio__custom + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0.7em;
+}
+.radio__custom + label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.radio__custom:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.custom__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom__checkbox:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.custom__label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0.7em;
+}
+.custom__label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  z-index: 1;
+}
+.form__first-name {
+  width: 50%;
+}
+.form__last-name {
+  width: 50%;
+}
+.form__email {
+  width: 100%;
+}
+.form__password {
+  width: 50%;
+}
+.form__password-again {
+  width: 50%;
+}
+.form__gender {
+  width: 50%;
+}
+.form__hobbies {
+  width: 50%;
+}
+.form__bio-field {
+  width: 100%;
+  min-height: 200px;
+  resize: none;
+}
+.form__sourseofincome {
+  width: 50%;
+}
+.form__income {
+  width: 50%;
+}
+.form__income-range {
+  width: 100%;
+}
+.form__income-range_input {
+  width: 85%;
+}
+.form__uploadfile {
+  width: 50%;
+}
+.form__uploadfile_input {
+  font-size: 1.5em;
+  color: #616266;
+  font-weight: 600;
+  font-family: Heebo;
+}
+.form__age {
+  width: 50%;
+}
+.form__bio {
+  width: 100%;
+}
+.form__submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  align-items: flex-end;
+  background: #e1e5ed;
+  border-radius: 0 0 20px 20px;
+  border-top: 2px solid #616266;
+}
+.form__submit_button {
+  background: #16f069;
+  border: none;
+  font-size: 2em;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.form__submit_button:hover {
+  background-color: #6db500;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 2em;
+}
+.form-group__input {
+  width: 100%;
+}
+.form-group__select {
+  width: 100%;
+}
+.form-group__number {
+  background: #16f069;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 2%;
+}
+.form-group__wrap {
+  padding: 1.3em 0;
+}

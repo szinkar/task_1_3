@@ -1,0 +1,240 @@
+$background: #85e6d7;
+$formcl-head: #e1e5ed;
+$formcl-content: #fafafa;
+$text-color: #111;
+$heaher-color: #8f939c;
+$line-color: #616266;
+$formhd-text: #16f069;
+$hover-btn: #6db500;
+$white: #fff;
+
+
+@import "_normalize.scss";
+
+
+%tpltext{
+  font-weight: 700;
+  font-size: 1.7em;
+  color: $formhd-text;
+}
+
+
+%tplinput{
+  border-radius: 5px;
+  border: 1px solid $heaher-color;
+  padding: 0.3em;
+}
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  background: $background;
+  min-height: 100vh;
+}
+
+
+.container{
+  width: 60%;
+  background: $formcl-content;
+  margin: 3em 0;
+  border-radius: 20px;
+}
+
+
+.title{
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  font-weight: 600;
+  font-size: 3em;
+  color: $heaher-color;
+  width: 100%;
+  background: $formcl-head;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 2px solid $line-color;
+}
+
+
+.radio{
+  &__custom{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &+label{
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      margin: 0.7em;
+      &::before{
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #adb5bd;
+        border-radius: 50%;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+    }
+    &:checked+label::before{
+      border-color: #0b76ef;
+      background-color: #0b76ef;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    }
+  }
+}
+
+
+.custom{
+  &__checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &:checked+label::before{
+      border-color: #0b76ef;
+      background-color: #0b76ef;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+  }
+  &__label{
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    margin: 0.7em;
+    &::before{
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #adb5bd;
+        border-radius: 0.25em;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+  }
+}
+
+
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  z-index: 1;
+  &__first-name{
+    width: 50%;
+  }
+  &__last-name{
+    width: 50%;
+  }
+  &__email{
+    width: 100%;
+  }
+  &__password{
+    width: 50%;
+  }
+  &__password-again{
+    width: 50%;
+  }
+  &__gender{
+    width: 50%;
+  }
+  &__hobbies{
+    width: 50%;
+  }
+  &__bio-field{
+    width: 100%;
+    min-height: 200px;
+    resize: none;
+    @extend %tplinput
+  }
+  &__sourseofincome{
+    width: 50%;
+  }
+  &__income{
+    width: 50%;
+  }
+  &__income-range{
+    width: 100%;
+    &_input{
+      width: 85%;
+    }
+  }
+  &__uploadfile{
+    width: 50%;
+    &_input{
+      font-size: 1.5em;
+      color: $line-color;
+      font-weight: 600;
+      font-family: Heebo;
+    }
+  }
+  &__age{
+    width: 50%;
+  }
+  &__bio{
+    width: 100%;
+  }
+  &__submit{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    align-items: flex-end;
+    background: $formcl-head;
+    border-radius: 0 0 20px 20px;
+    border-top: 2px solid $line-color;
+    &_button{
+      background: $formhd-text;
+      border: none;
+      font-size: 2em;
+      font-weight: 600;
+      color: $white;
+      border-radius: 5px;
+      padding: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover{
+      background-color: $hover-btn;
+      }
+    }
+  }
+}
+
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 2em;
+  &__header{
+    @extend %tpltext;
+  }
+  &__input{
+    @extend %tplinput;
+    width: 100%;
+  }
+  &__select{
+    @extend %tplinput;
+    width: 100%;
+  }
+  &__number{
+    background: $formhd-text;
+    color: $white;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 2%;
+  }
+  &__wrap{
+    padding: 1.3em 0;
+  }
+}

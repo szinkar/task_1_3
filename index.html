@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form - task 1.3</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="title">Create Account</div>
+      <form action="#" method="post" class="form">
+        <div class="form-group form__first-name">
+          <span class="form-group__header">First name *</span>
+          <input class="form-group__input" type="text" name="user-firstname" value="" placeholder="enter your first name" required>
+        </div>
+        <div class="form-group form__last-name">
+          <span class="form-group__header">Last name</span>
+          <input class="form-group__input" type="text" name="user-lastname" value="" placeholder="enter your last name" required>
+        </div>
+        <div class="form-group form__email">
+          <span class="form-group__header">Email *</span>
+          <input class="form-group__input" type="text" name="user-email" value="" placeholder="enter your email" required>
+        </div>
+        <div class="form-group form__password">
+          <span class="form-group__header">Password *</span>
+          <input class="form-group__input" type="password" name="user-pass" value="" placeholder="enter your password" required>
+        </div>
+        <div class="form-group form__password-again">
+          <span class="form-group__header">Confirm password *</span>
+          <input class="form-group__input" type="password" name="user-passagain" value="" placeholder="enter your password again" required>
+        </div>
+        <div class="form-group form__gender">
+          <span class="form-group__header">Gender:</span>
+          <div class="form__gender-buttons radio">
+            <input id="male" class="radio__custom" type="radio" name="gender" value="male" checked>
+            <label for="male">Male</label>
+            <input id="female" class="radio__custom" type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <div class="form-group form__hobbies">
+          <span class="form-group__header">Hobbies:</span>
+          <div class="form__hobbies-buttons custom">
+            <input id="music" class="custom__checkbox" type="checkbox" name="hobbie" value="music" checked>
+            <label for="music" class="custom__label">Music</label>
+            <input id="sport" class="custom__checkbox" type="checkbox" name="hobbie" value="sport">
+            <label for="sport" class="custom__label">Sports</label>
+            <input id="travel" class="custom__checkbox" type="checkbox" name="hobbie" value="travel">
+            <label for="travel" class="custom__label">Travel</label>
+            <input id="muvies" class="custom__checkbox" type="checkbox" name="hobbie" value="muvies">
+            <label for="muvies" class="custom__label">Muvies</label>
+          </div>
+        </div>
+        <div class="form-group form__sourseofincome">
+          <span class="form-group__header">Sourse of income:</span>
+          <div class="form__sourseofincome-select">
+            <select class="form-group__select" name="sourseofincome">
+              <option value="employed">Employed</option>
+              <option value="hobbie">Hobbie</option>
+              <option value="sport">Sport</option>
+              <option value="freelance">Freelance</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group form__income">
+          <span class="form-group__header">Income:</span>
+          <div class="form__income-range">
+            <label><input class="form__income-range_input" type="range" name="income" value=""><span class="form-group__number">20K</span></label>
+          </div>
+        </div>
+        <div class="form-group form__uploadfile">
+          <span class="form-group__header">Upload Profile Picture:</span>
+          <div class="form__uploadfile-img">
+            <label><input class="form__uploadfile_input" type="file" name="upload-img" value=""></label>
+          </div>
+        </div>
+        <div class="form-group form__age">
+          <span class="form-group__header">Age:</span>
+          <div class="form__age-input">
+            <input class="form-group__input" type="text" name="age" placeholder="enter your age" value="">
+          </div>
+        </div>
+        <div class="form-group form__bio">
+          <span class="form-group__header">Bio:</span>
+          <div class="form__bio-text">
+            <textarea class="form__bio-field" name="bio" placeholder="tell us about yourself"></textarea>
+          </div>
+        </div>
+        <div class="form-group form__submit">
+          <div class="form-group__wrap">
+            <button class="form__submit_button" type="submit">Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
